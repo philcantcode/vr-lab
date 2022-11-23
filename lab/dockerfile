@@ -1,0 +1,19 @@
+FROM ubuntu:kinetic
+RUN apt update -y
+RUN apt update --fix-missing -y
+RUN apt install ca-certificates -y
+
+RUN apt install traceroute -y
+RUN apt install -y iproute2
+RUN apt install iputils-ping -y
+RUN apt install nano -y
+RUN apt install sed -y
+RUN apt install python3-pip -y
+RUN apt install git -y
+RUN apt install curl -y
+RUN apt install dnsutils -y
+RUN apt install wget -y
+RUN apt install unzip -y
+RUN apt install gdb -y
+
+CMD [ "sleep", "1d" ]

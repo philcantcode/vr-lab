@@ -1,0 +1,9 @@
+version: "3.4"
+#Image: [<registry>/][<project>/]<image>[:<tag>|@<digest>]
+services:
+    lab:
+        volumes:
+          - ./storage/:/storage
+        build:
+          context: ./lab
+          dockerfile: dockerfile
