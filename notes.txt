@@ -1,0 +1,2 @@
+GCC Compile
+    gcc -fno-stack-protector ___.c -o ___.exe 

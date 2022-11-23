@@ -16,4 +16,6 @@ RUN apt install wget -y
 RUN apt install unzip -y
 RUN apt install gdb -y
 
+RUN unminimize -y
+
 CMD [ "sleep", "1d" ]
