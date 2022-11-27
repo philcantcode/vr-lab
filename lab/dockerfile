@@ -14,8 +14,8 @@ RUN apt install curl -y
 RUN apt install dnsutils -y
 RUN apt install wget -y
 RUN apt install unzip -y
-RUN apt install gdb -y
 
-RUN unminimize -y
+RUN apt install gdb -y
+RUN apt install file -y
 
 CMD [ "sleep", "1d" ]
