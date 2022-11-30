@@ -1,4 +1,6 @@
-
-
-
+break *(vuln+23)
+break *(vuln+0)
+break *(exe+97)
+break *(exe+98)
+break *(exe+82)
 
