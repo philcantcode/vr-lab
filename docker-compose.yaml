@@ -7,3 +7,5 @@ services:
         build:
           context: ./lab
           dockerfile: dockerfile
+        security_opt:
+          - seccomp:unconfined

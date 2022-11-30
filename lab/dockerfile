@@ -18,4 +18,22 @@ RUN apt install unzip -y
 RUN apt install gdb -y
 RUN apt install file -y
 
+# AFL-Fuzzer
+RUN git clone https://github.com/google/AFL
+RUN apt install python2.7 -y
+RUN mv /bin/python2.7 /bin/python
+RUN apt install libtool -y
+RUN apt install libtool-bin -y
+RUN apt install bison -y
+RUN apt install libglib2.0-dev -y
+WORKDIR "/AFL"
+RUN make install
+WORKDIR "/AFL/qemu_mode"
+RUN ./build_qemu_support.sh
+RUN wget https://tickelton.gitlab.io/articles/afl-arm-rpi/syscall.diff -O /AFL/qemu_mode/patches/syscall.diff
+RUN ./build_qemu_support.sh
+RUN export AFL_PATH=/AFL
+
+WORKDIR "/"
+
 CMD [ "sleep", "1d" ]

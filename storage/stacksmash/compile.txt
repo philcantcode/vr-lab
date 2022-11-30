@@ -1,0 +1,2 @@
+gcc vuln.c -o vuln.exe -fno-stack-protector -no-pie -z execstack -z norelro
+// -mno-red-zone
